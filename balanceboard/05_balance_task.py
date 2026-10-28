@@ -60,13 +60,13 @@ except ImportError:                      # not on Windows
 # ----------------------------- SETTINGS -----------------------------
 SESSION_LABEL = "S001"
 SENSOR_ADDRESS = None          # e.g. "D4:22:CD:00:12:34"; None = first sensor found
-OUTPUT_RATES = (120, 60)       # Hz, tried in this order (falls back if the sensor can't keep up)
+OUTPUT_RATES = (60, 120)       # Hz, tried in this order (falls back if the sensor can't keep up)
 PAYLOAD_MODES = ("CustomMode4", "CustomMode5", "CustomMode1", "ExtendedEuler", "CompleteEuler")
 HOLD_MODE = True               # wall = right arrow held down (False: each press toggles)
 
-TOTAL_TRIALS = 7
+TOTAL_TRIALS = 10
 SESSION_DURATION_S = 30.0      # active balancing per trial
-BREAK_DURATION_S = 45.0        # rest between trials
+BREAK_DURATION_S = 60.0        # rest between trials
 COUNTDOWN_S = 5                # beeps before each trial
 END_BREAK_S = 600              # recovery break after the run
 
